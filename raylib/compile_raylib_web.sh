@@ -1,7 +1,8 @@
 #!/bin/bash
 
+SCRIPTS_SRC=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 source ./compile_raylib.sh
-cd -
+cd $SCRIPTS_SRC
 
 EMSDK_REPO=../../emsdk
 if [ -d $EMSDK_REPO ]; then
@@ -26,6 +27,7 @@ git pull
 # Activate PATH and other environment variables in the current terminal
 source ./emsdk_env.sh
 
+cd $SCRIPTS_SRC
 cd $RAYLIB_REPO/src
 make -e PLATFORM=PLATFORM_WEB -B
 
