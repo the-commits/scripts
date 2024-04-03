@@ -9,7 +9,7 @@ fi
 # Install required tools
 sudo apt install build-essential git cmake
 # Install required libraries
-sudo apt install libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev
+sudo apt install xorg-dev libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev
 
 git clone https://github.com/raysan5/raylib.git -- $RAYLIB_REPO
 cd $RAYLIB_REPO/src
